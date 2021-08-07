@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>START WITH STRING</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bt/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+  <script src="bt/js/jquery-1.4.2.min.js"></script>
+  <script src="bt/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="css/prism.css">
+
+ <script src="js/prism.js"></script>
+</head>
+<body>
+ 
+
+
+  
+  <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 64: Get String</div>
+      <div class="panel-body">
+        <p>Write a program to print the following output-</p>
+
+		<p>Enter your name:</p>
+
+		<p>Mr. Jhon Snow [This line will be given by the user]</p>
+
+		<p>Hello!! Mr. Jhon Snow</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;string.h&gt;
+ 
+int main()
+{
+
+   char str[100];
+
+   gets(str);
+   printf("Hello!! Mr.%s\n",str);
+
+
+    return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+  </div>
+  
+  
+    <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 65: Reverse</div>
+      <div class="panel-body">
+        <p>Take a word from user and print the word in reverse order. [If user gives  “BANGLADESH”, your program should print “HSEDALGNAB”]</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;string.h&gt;
+ 
+int main()
+{
+
+    char str[100];
+    int length,i;
+    scanf("%s",str);
+    length=strlen(str);
+
+    for(i=length;i&gt;=0;i--)
+    {
+        printf("%c",str[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+  <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 66: String length</div>
+      <div class="panel-body">
+        <p>Find the length of a given string.[If user gives input “LovE”, you should print: 4]</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;string.h&gt;
+ 
+int main()
+{
+ 
+    char str[100];
+    int length=0,i=0;
+ 
+    scanf("%s",str);
+ 
+    while(1)
+    {
+        if(str[i]=='\0')
+        {
+            break;
+        }
+        else
+        {
+            i++;
+            length++;
+        }
+    }
+ 
+    printf("%d",length);
+ 
+ 
+    return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+    <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 67: Separate</div>
+      <div class="panel-body">
+        <p>Take a string as input from the user and print the every single character of it into a separate line. If user gives “DHAKA”, output should look like the following-</p>
+        
+        <p>D</p>
+        <p>H</p>
+        <p>A</p>
+        <p>K</p>
+        <p>A</p>
+
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;string.h&gt;
+ 
+int main()
+{
+
+    char str[1000];
+    int i;
+    scanf("%s",str);
+
+    for(i=0;i&lt;strlen(str);i++)
+    {
+        printf("%c\n",str[i]);
+    }
+
+
+    return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+      <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 68: Add String</div>
+      <div class="panel-body">
+        <p>Take three different string as input from the user(“We”, “ Love” and “ Bangladesh”). Now concate these three string and print it (“We Love Bangladesh”). [There is a leading space in “ Love” and “ Bangladesh”]</p>
+
+
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;string.h&gt;
+ 
+int main()
+{
+
+    char str1[3]="We";
+    char str2[6]=" Love";
+    char str3[12]=" Bangladesh";
+    char str4[35];
+
+    int length,i,j=0,k;
+
+    for(i=0;i&lt;strlen(str1);i++)
+    {
+        str4[j++]=str1[i];
+
+    }
+    for(i=0;i&lt;strlen(str2);i++)
+    {
+        str4[j++]=str2[i];
+    }
+    for(i=0;i&lt;strlen(str3);i++)
+    {
+        str4[j++]=str3[i];
+    }
+    str4[j]='\0';
+    printf("%s\n",str4);
+
+
+
+    return 0;
+}	</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+        <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 69: Table</div>
+      <div class="panel-body">
+        <p>Write a program which takes a string of alphabet as input and replace all the characters with the 3rd immediate character of it. All the alphabets of the input string will be small letter. [If user gives input “abc” you should print “def”, if user gives input “xyz” you should print “abc”]</p>
+
+
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;string.h&gt;
+ 
+int main()
+{
+
+    char str[1000];
+    int i;
+    scanf("%s",str);
+
+    for(i=0;i&lt;strlen(str);i++)
+    {
+        if(str[i]&gt;=120 && str[i]&lt;=123)
+        {
+            printf("%c",str[i]-23);
+        }
+        else
+        {
+            printf("%c",str[i]+3);
+        }
+
+    }
+
+
+    return 0;
+}	</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+         <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 70: Case Fix</div>
+      <div class="panel-body">
+        <p>You are given a string mixed with uppercase and lowercase letters . Your task is to write a program which will flip the letters (UpperCase -&gt; LowerCase, LowerCase -&gt; UpperCase).</p>
+
+		<p>Example: INPUT: OUTPUT:</p>
+
+		<p>eLepHanT Elephant</p>
+
+		<p>cAt Cat</p>
+
+		<p>SuNDAY Sunday</p>
+
+
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;string.h&gt;
+ 
+int main()
+{
+
+    char str[1000];
+    int i;
+    scanf("%s",str);
+
+    if(str[0]&gt;=97 && str[0]&lt;=122)
+        str[0]=str[0]-32;
+    printf("%c",str[0]);
+    for(i=1;i&lt;strlen(str);i++)
+    {
+        if(str[i]&gt;=65 && str[i]&lt;=91)
+            printf("%c",str[i]+32);
+        else
+            printf("%c",str[i]);
+    }
+
+
+    return 0;
+}	</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+           <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 71: Word count</div>
+      <div class="panel-body">
+        <p>Write a program which will take a sentence as input and tell us how many words are there. [If user gives input “I love Bangladesh”, then the output should be: 3]</p>
+
+
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;string.h&gt;
+ 
+int main()
+{
+
+    char str[1000];
+    int i,word_count=1;
+    gets(str);
+
+
+    for(i=0;i&lt;strlen(str);i++)
+    {
+        if(str[i]==' ')
+            word_count++;
+    }
+    printf("%d\n",word_count);
+
+    return 0;
+}	</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+            <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 72: Palindrome</div>
+      <div class="panel-body">
+        <p>A string is palindrome if it seems same from the both side. Like “ABA”, “XXYXX”, “M” all are palindromes and “XY” is not a palindrome. Now write a program which will take a string as input from the user and print “YES, It is a palindrome” if it satisfies the condition otherwise print “No, It is not a palindrome”.</p>
+
+
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;string.h&gt;
+ 
+int main()
+{
+
+    char str[100];
+    int length,i,flag=0;
+
+    scanf("%s",str);
+
+    length=strlen(str)-1;
+
+    for(i=0;i&lt;=length/2;i++)
+    {
+        if(str[i]==str[length-i])
+            flag=1;
+        else
+            flag=0;
+    }
+    if(flag==0)
+    {
+        printf("No, It is not a palindrome\n");
+    }
+    else
+    {
+        printf("YES, It is a palindrome\n");
+    }
+
+
+    return 0;
+}	</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+              <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 73: Letter Count</div>
+      <div class="panel-body">
+        <p>Let’s take a string and you have to find how many alphabets are there and their repetitions. Case sensitive.</p>
+
+		<p>Ex: Input: Output:</p>
+		<p>AaaBBc A(1)B(2)a(2)c(1)</p>
+
+
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;string.h&gt;
+ 
+int main()
+{
+
+    char str[1000];
+    int i;
+    int arr[123];
+    scanf("%s",str);
+    for(i=0;i&lt;123;i++)arr[i]=0;
+    for(i=0;i&lt;strlen(str);i++)
+    {
+        arr[str[i]]++;
+    }
+
+    for(i=0;i&lt;123;i++)
+    {
+        if(arr[i]!=0)
+            printf("%c(%d)",i,arr[i]);
+    }
+    return 0;
+}	</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+
+</body>
+</html>
+

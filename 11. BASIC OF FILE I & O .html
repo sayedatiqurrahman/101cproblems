@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BASIC OF FILE I/O</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bt/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+  <script src="bt/js/jquery-1.4.2.min.js"></script>
+  <script src="bt/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="css/prism.css">
+
+ <script src="js/prism.js"></script>
+</head>
+<body>
+ 
+
+<div class="panel panel-info">
+      <div class="panel-heading">Problem 86: File write</div>
+      <div class="panel-body">
+        <p>Write a program that opens a file named myFile.txt on write mode and write 100(integer) into that file.</p>
+      </div>
+   		
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+main() {
+   FILE *fp;
+
+   fp = fopen("myFile.txt", "w");
+   fprintf(fp, "%d", 100);
+   fclose(fp);
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 87: Delete Text</div>
+      <div class="panel-body">
+        <p>Write a program which will delete all the text from a text file and write “LOVE” on that file.</p>
+      </div>
+   		
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main() {
+   FILE *fp;
+   fp = fopen("myFile.txt", "w");
+   fprintf(fp, "%s", "Love");
+
+return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div> 
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 88: Append</div>
+      <div class="panel-body">
+        <p>Write a program which will create a file named myFile.txt and write “We LovE” on that file. Then read the file and print the text of that file into console. Finally, append “Our Country” with the previous text of that file and print the whole text again into console.</p>
+      </div>
+   		
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+    int c;
+    FILE *file;
+
+    file = fopen("newFile.txt", "w");
+    fprintf(file, "%s", "We Love");
+    fclose(file);
+
+    file = fopen("newFile.txt", "r");
+    if (file) {
+        while ((c = getc(file)) != EOF)
+            putchar(c);
+        fclose(file);
+    }
+    printf("\n");
+
+    file=fopen("newFile.txt", "a");
+    fprintf(file,"%s"," Our Country");
+    fclose(file);
+
+    file = fopen("newFile.txt", "r");
+    if (file) {
+        while ((c = getc(file)) != EOF)
+            putchar(c);
+        fclose(file);
+    }
+
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 89: Read File</div>
+      <div class="panel-body">
+        <p>Create a text file in your computer and write 10 integers in 10 separate lines. Now write a program which will open the file and read that 10 integers. Finally print the average of that ten integers.</p>
+      </div>
+   		
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+    FILE *file;
+    int n[10];
+    int i=0,sum=0;
+
+    file = fopen("integers89.txt", "r");
+    while(fscanf(file,"%d",&n[i])!=EOF)
+         i++;
+    for(i =0;i &lt; 10 ;i++)
+    {
+        sum=sum+n[i];
+    }
+    printf("%.2f",sum/10.0);
+
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 90: Paragraph</div>
+      <div class="panel-body">
+        <p>Create a text file in your computer and write a paragraph about INTERNET on that file. Then write a program which will open that file and print the whole paragraph into console.</p>
+      </div>
+   		
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+      	</code>
+        #include&lt;stdio.h&gt;
+
+int main()
+{
+    char par[100000];
+    FILE *file;
+    file=fopen("paragraph.txt","r");
+    while(fgets(par,10000,file))
+    {
+        printf("%s",par);
+    }
+    printf("\n");
+}
+</pre></div>
+    </div>
+ 
+    </div>
+</body>
+</html>
+
+
+

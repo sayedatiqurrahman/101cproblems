@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>APPLY YOUR CONDITIONS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bt/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+  <script src="bt/js/jquery-1.4.2.min.js"></script>
+  <script src="bt/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="css/prism.css">
+
+ <script src="js/prism.js"></script>
+</head>
+<body>
+ 
+
+    <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 16: Admission</div>
+      <div class="panel-body">
+        <p>Suppose you are going to apply for admission in a college. If you got GPA 5 in SSC exam then you can apply for that college. Now give your GPA as input from the keyboard and print “YES” if you can apply otherwise print “NO”.</p>
+       
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+
+   double gpa;
+   printf("Enter your GPA (2.00 - 5.00): \n");
+   scanf("%lf",&gpa);
+
+   if(gpa&#60;	5.00)
+   {
+       printf("NO\n");
+   }
+   else
+   {
+       printf("YES\n");
+   }
+
+    return 0;
+}</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+      <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 17: GPA</div>
+      <div class="panel-body">
+        <p>Take a value from user and assume that- it is the number of his math exam.</p>
+        <p>Now you have to write a program which shows the grade depending on the given scale. </p>
+        <p>(A+: 80-100, A: 70-79, A-: 60-69, B: 50-59, C: 40-49, D :33-39 ,F :0-32)
+
+ </p>
+       
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+
+    double mark;
+    printf("Enter your marks in math: \n");
+    scanf("%lf",&mark);
+
+    if(mark&lt;=100 && mark&gt;=80)
+    {
+        printf("Your Grade: A+\n");
+
+    }else if(mark&lt;80 && mark &gt;=70)
+    {
+        printf("Your Grade: A\n");
+    }
+    else if(mark&lt;70 && mark &gt;=60)
+    {
+        printf("Your Grade: A-\n");
+    }
+    else if(mark&lt;60 && mark &gt;=50)
+    {
+        printf("Your Grade: B\n");
+    }
+    else if(mark&lt;50 && mark &gt;=40)
+    {
+        printf("Your Grade: C\n");
+    }
+    else if(mark&lt;40 && mark &gt;=33)
+    {
+        printf("Your Grade: D\n");
+    }
+    else if(mark&lt;33)
+    {
+        printf("Your Grade: F\n");
+    }
+
+    return 0;
+}</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+      <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 18: Bank Account</div>
+      <div class="panel-body">
+        <p>You are going to open a bank account . If your age is greater than 18 then you can open an account. Get your age by input and print “Yes” if you can open an account otherwise print “No”.</p>
+       
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+
+   int age;
+   printf("Enter your age: \n");
+   scanf("%d",&age);
+
+   if(age &lt;= 18)
+   {
+       printf("NO\n");
+   }
+   else
+   {
+       printf("YES\n");
+   }
+
+    return 0;
+}</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 19: Odd or Even</div>
+      <div class="panel-body">
+        <p>Write a program which determines whether a number is ODD or EVEN.
+
+</p>
+       
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+
+    int num;
+    printf("Enter a number to test: \n");
+    scanf("%d",&num);
+
+    if(num%2 == 0)
+    {
+        printf("Even Number\n");
+    }
+    else
+    {
+        printf("Odd Number\n");
+    }
+
+    return 0;
+}</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 20: Divisible</div>
+      <div class="panel-body">
+        <p>Take an integer number as input from user and print “Yes” if the number is divisible by 3 and 5. And print “No” if the number is not.</p>
+       
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+
+    int num;
+    printf("Enter a number to test: \n");
+    scanf("%d",&num);
+
+    if(num%3 == 0 && num%5 == 0)
+    {
+        printf("YES\n");
+    }else
+    {
+        printf("NO\n");
+    }
+
+    return 0;
+}</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+   <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 21: Maximum</div>
+      <div class="panel-body">
+        <p>Take 3 integers from user using scanf() function and write a program to find the maximum one.</p>
+       
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+    int a,b,c;
+    printf("Enter three integer numbers: \n");
+    scanf("%d%d%d",&a,&b,&c);
+
+    if(a&gt;b && a&lt;c)
+    {
+        printf("Max: %d\n",a);
+
+    }else if(b &gt; c)
+    {
+        printf("Max: %d\n",b);
+    }else
+    {
+        printf("Max: %d\n",c);
+    }
+
+    return 0;
+}</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+   <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 22: Vowel</div>
+      <div class="panel-body">
+        <p>Take a small letter alphabet as input and print whether it is VOWEL or CONSONANT.</p>
+       
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+    char letter;
+    printf("Enter a small letter alphabet:\n");
+    scanf("%c",&letter);
+
+    if(letter=='a'||letter=='e'||letter=='i'||letter=='o'||letter=='u'){
+       printf("%c is Vowel\n",letter);
+    }
+    else{
+       printf("%c is Consonant\n",letter);
+    }
+
+    return 0;
+}</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+  <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 23: Months Name</div>
+      <div class="panel-body">
+        <p>Write a program that takes an integer as input [ 1 – 12 ] and print the corresponding month name. [If user gives input ‘1’ you should print ‘January’]</p>
+       
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+
+    int month;
+    printf("Enter the integer [1 - 12]:\n");
+    scanf("%d",&month);
+
+    if(month == 1)
+    {
+        printf("January\n");
+    }else if(month == 2)
+    {
+        printf("February\n");
+    }
+    else if(month == 3)
+    {
+        printf("March\n");
+    }
+    else if(month == 4)
+    {
+        printf("April\n");
+    }
+    else if(month == 5)
+    {
+        printf("May\n");
+    }
+    else if(month == 6)
+    {
+        printf("June\n");
+    }
+    else if(month == 7)
+    {
+        printf("July\n");
+    }
+    else if(month == 8)
+    {
+        printf("August\n");
+    }
+    else if(month == 9)
+    {
+        printf("September\n");
+    }
+    else if(month == 10)
+    {
+        printf("October\n");
+    }
+    else if(month == 11)
+    {
+        printf("November\n");
+    }
+    else if(month == 12)
+    {
+        printf("December\n");
+    }else{
+        printf("Invalid input.\n");
+    }
+
+    return 0;
+}</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+
+<div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 24: Salary Scale</div>
+      <div class="panel-body">
+        <p>You are given the rank and salary scale of a company-</p>
+        <p>Rank – salary </p>
+        
+        <p>1 – 2,50,000 BDT </p>
+        <p>2 – 2,10,000 BDT </p>
+        <p>3 – 1,50,000 BDT</p>
+        <p>4 – 80,000 BDT </p>
+        <p>&gt;=5 – 50,000 BDT</p>
+        
+        <p>Now, take the rank as input from the user and print the salary of the given rank. [If user gives input ‘3’ you should print ‘Your Salary: 1,50,000 BDT’] </p>
+        
+       
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+    int rank;
+    printf("Please enter your rank:\n");
+    scanf("%d",&rank);
+
+    if(rank == 1)
+    {
+        printf("Your Salary: 2,50,000 BDT.\n");
+    }
+    else if(rank == 2)
+    {
+        printf("Your Salary: 2,10,000 BDT.\n");
+    }
+     else if(rank == 3)
+    {
+        printf("Your Salary: 1,50,000 BDT.\n");
+    }
+     else if(rank == 4)
+    {
+        printf("Your Salary: 80,000 BDT.\n");
+    }
+     else if(rank &gt;= 5)
+    {
+        printf("Your Salary: 50,000 BDT.\n");
+    }
+
+    return 0;
+}</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 25: Coordinate</div>
+      <div class="panel-body">
+        <p>Take two integers indicating the x and y coordinate of a two-dimensional graph paper where the center point is x = 0 and y = 0. Now print the quadrant of the given point. [If user gives input (4,5) you should print ‘First quadrant’; If user gives input (-4,-5) you should print ‘Third quadrant’ ]</p>
+       
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+
+    int x,y;
+    printf("Enter the value of X and Y coordinate:\n");
+    scanf("%d%d",&x,&y);
+
+    if(x &gt; 0 && y &gt; 0)
+    {
+        printf("First Quadrant\n");
+    }
+    else if(x &lt; 0 && y &gt; 0)
+    {
+        printf("Second Quadrant\n");
+
+    }else if(x &lt;0 && y &lt; 0)
+    {
+        printf("Third Quadrant\n");
+
+    }else
+    {
+        printf("Fourth Quadrant\n");
+    }
+
+    return 0;
+}</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+
+</body>
+</html>
+

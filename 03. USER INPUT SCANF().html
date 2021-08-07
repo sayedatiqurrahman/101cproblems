@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>USER INPUT SCANF()</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bt/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+  <script src="bt/js/jquery-1.4.2.min.js"></script>
+  <script src="bt/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="css/prism.css">
+
+ <script src="js/prism.js"></script>
+</head>
+<body>
+ 
+
+    <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 13: Equation</div>
+      <div class="panel-body">
+        <p>Take four integer variables a, b, x and y. Scan the values of the variables from user using scanf() function. Now print the output of the following equation:</p>
+        <p>(a*b) + (x*y) </p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+
+    int a,b,x,y;
+
+    printf("Enter the value of a, b, x and y:\n");
+    scanf("%d%d%d%d",&a,&b,&x,&y);
+
+    printf("%d\n",(a*b)+(x*y));
+
+    return 0;
+}	</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+      <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 14: Fahrenheit</div>
+      <div class="panel-body">
+        <p>Take temperature of Dhaka city as input in Celsius scale from the user using scanf() function and convert it to Fahrenheit and print it.</p>
+        <p>[Formula: F = C(9/5) +32] </p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+    double celsius,farenheit;
+
+    printf("Enter the temperature in Celsius:");
+    scanf("%lf",&celsius);
+
+    farenheit=((celsius*(9.0/5.0))+32);
+    printf("%lf\n",farenheit);
+
+    return 0;
+}	</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+        <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 15: Capital</div>
+      <div class="panel-body">
+        <p>Take a small letter alphabet as input from the user and print the capital version of that letter. [If user gives input ‘a’ you should print ‘A’]</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+
+
+int main()
+{
+
+    char letter;
+
+    printf("Enter a small letter: \n");
+    scanf("%c",&letter);
+    printf("Capital version is: %c\n",letter-32);
+
+    return 0;
+}	</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+</body>
+</html>

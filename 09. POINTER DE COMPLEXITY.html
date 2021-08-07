@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>POINTER DE COMPLEXITY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bt/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+  <script src="bt/js/jquery-1.4.2.min.js"></script>
+  <script src="bt/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="css/prism.css">
+
+ <script src="js/prism.js"></script>
+</head>
+<body>
+ 
+
+
+  
+  <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 74: Mem Address</div>
+      <div class="panel-body">
+        <p>Take an integer variable named X and assign X = 5. Now print its memory address like the following output-</p>
+
+		<p>Memory Address of X is : XXXXXX</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+    int x;
+    x=5;
+    printf("Memory Address of X is : %d\n",&x);
+
+return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+  </div>
+  
+  <div class="panel panel-info">
+      <div class="panel-heading">Problem 75: Address</div>
+      <div class="panel-body">
+        <p>Take two pointer variables of integer type named pX and pY. Now take another two variables of integer data type named X and Y. Assign X = 100 and Y = 200. Assign the address of X to pX and address of Y to pY. Now print the values of X and Y using pX and pY.</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+    int *px,*py;
+    int X,Y;
+    X=100;
+    Y=200;
+    px=&X;
+    py=&Y;
+    printf("%d\n%d\n",*px,*py);
+
+
+return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 76: Pointer Test I</div>
+      <div class="panel-body">
+        <p>Write the output of the following code without compiling-</p>
+
+		<p>#include&lt;stdio.h&gt;</p>
+
+		<p>int main(){</p>
+
+		<p>   int a[]={5,10,15,20,25};</p>
+
+		<p>   int *pA;</p>
+
+		<p>   pA = &a[2];</p>
+
+		<p>   printf(“%d %d”,*pA, *(pA+2));</p>
+
+		<p>return 0;</p>
+
+		<p>}</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main(){
+
+   int a[]={5,10,15,20,25};
+
+   int *pA;
+
+   pA = &a[2];
+
+   printf("%d %d",*pA, *(pA+2));
+
+return 0;
+
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+
+ <div class="panel panel-info">
+      <div class="panel-heading">Problem 77: Array Address</div>
+      <div class="panel-body">
+        <p>Is there any error in the following program? If not what will be the output-</p>
+
+		<p>#include&lt;stdio.h&gt;</p>
+
+		<p>int main(){</p>
+
+		<p>   int i;</p>
+
+   		<p>double *pA;</p>
+
+		<p>   double a[]={5,10,15,20,25};</p>
+
+		<p>   pA = a;</p>
+
+		<p>   for(i = 0; i &lt; 5; i++){</p>
+
+		<p>       printf(“%.2lf “,*(pA+i));</p>
+
+		<p>   }</p>
+
+		<p>return 0;</p>
+
+<p>}</p>
+
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main(){
+
+   int i;
+
+   double *pA;
+
+   double a[]={5,10,15,20,25};
+
+   pA = a;
+
+   for(i = 0; i &lt; 5; i++){
+
+       printf("%.2lf ",*(pA+i));
+
+   }
+
+return 0;
+
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 78: Pointer^2</div>
+      <div class="panel-body">
+        <p>Take an integer variable named VAR and assign VAR = 500. Take a pointer variable named *ptr of integer type and assign the address of VAR to ptr. Then take another pointer to pointer variable named **pptr of integer type and assign the address of pointer variable ptr to pptr. Now print the value of VAR using the VAR , ptr and pptr respectively in three different lines.</p>
+
+		<p>Memory Address of X is : XXXXXX</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main(){
+    int VAR;
+    VAR=500;
+    int *ptr;
+    ptr=&VAR;
+    int **pptr;
+    pptr=ptr;
+
+    printf("%d\n",VAR);
+    printf("%d\n",*ptr);
+    printf("%d\n",*pptr);
+
+return 0;
+
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+ 
+ <div class="panel panel-info">
+      <div class="panel-heading">Problem 79: Pointer Test III</div>
+      <div class="panel-body">
+        <p>Write down the output of the following program without running-</p>
+		<p>#include &lt;stdio.h&gt;</p>
+		<p>int main()</p>
+		<p>{</p>
+  		<p>char *str = “Bangladesh”;</p>
+  		<p>printf(“%c %c %c”,*str, *(str + 3), *(str + 4));</p>
+  		<p>return(0);</p>
+		<p>}</p>
+
+		<p>Memory Address of X is : XXXXXX</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+  char *str = "Bangladesh";
+  printf("%c %c %c",*str, *(str + 3), *(str + 4));
+  return(0);
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 80: Array of String</div>
+      <div class="panel-body">
+        <p>Take an array of string named fruitNames and store four fruit names (“Mango”, “Jack-fruit”, “Banana”, “Litchi”). Now iterate the array using loop and print the names of the fruits each in a separate line.</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+int i;
+
+char *fruitNames[4] = {"Mango","Jack-fruit","Banana","Litchi"};
+char *(*ptr)[4] = &fruitNames;
+
+for(i=0;i&lt;4;i++)
+    printf("%s\n",(*ptr)[i]);
+
+return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+
+</body>
+</html>
+
+

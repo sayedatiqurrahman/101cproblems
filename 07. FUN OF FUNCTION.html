@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FUN OF FUNCTION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bt/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+  <script src="bt/js/jquery-1.4.2.min.js"></script>
+  <script src="bt/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="css/prism.css">
+
+ <script src="js/prism.js"></script>
+</head>
+<body>
+ 
+
+  
+  <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 54: Function</div>
+      <div class="panel-body">
+        <p>Write a function that simply prints a message “Hello!! I am from inside of function” and call the function from main function.</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> 
+      <pre class="line-numbers"> <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+void display()
+{
+    printf("Hello!! I am from inside of function\n");
+}
+
+int main()
+{
+    display();
+
+return 0;
+}
+	
+
+</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+    <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 55: Sum I</div>
+      <div class="panel-body">
+        <p>Write a function that takes two integers as input and prints their sum inside the function.</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> 
+      <pre class="line-numbers"> <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+int intSum(int a,int b)
+{
+    int total;
+    total=a+b;
+    return total;
+}
+
+int main()
+{
+    int value1,value2,sum;
+    scanf("%d%d",&value1,&value2);
+    sum=intSum(value1,value2);
+    printf("%d",sum);
+
+return 0;
+}
+	
+
+</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+      <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 56: Even & Odd</div>
+      <div class="panel-body">
+        <p>Write a function that takes an integer as input and prints EVEN if the number is divisible by 2 otherwise prints ODD. Call this function from the main function.</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> 
+      <pre class="line-numbers"> <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+void evenOdd(int number)
+{
+    if(number%2==0)
+        printf("EVEN\n");
+    else
+        printf("ODD\n");
+}
+
+int main()
+{
+    int number;
+    scanf("%d",&number);
+    evenOdd(number);
+
+return 0;
+}
+</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+        <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 57: Divisors</div>
+      <div class="panel-body">
+        <p>Write a function that takes an integer as input and prints all of its divisors. Call this function from the main function.</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> 
+      <pre class="line-numbers"> <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+void divisor(int value)
+{
+    int i;
+    for(i=1;i&lt;=value;i++)
+    {
+        if(value%i==0)
+            printf("%d ",i);
+    }
+}
+
+int main()
+{
+    int number;
+    scanf("%d",&number);
+    divisor(number);
+
+return 0;
+}
+</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+    
+        <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 58: Calculator</div>
+      <div class="panel-body">
+        <p>Suppose you are going to make a simple calculator. Your task is to prepare four functions- add(), subtract(), multiply() and divide() . Each function takes two parameters and return the value after applying the corresponding action on those parameters.</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> 
+      <pre class="line-numbers"> <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+float add(int number1,int number2)
+{
+    float result;
+    result=number1+number2;
+    return result;
+}
+
+float subtract(int number1,int number2)
+{
+    float result;
+    result=number1-number2;
+    return result;
+}
+
+float multiply(int number1,int number2)
+{
+    float result;
+    result=number1*number2;
+    return result;
+}
+
+float divide(int number1,int number2)
+{
+    float result;
+    result=number1/number2;
+    return result;
+}
+
+int main()
+{
+    int value1,value2;
+    float add_result,sub_result,mult_result,div_result;
+    scanf("%d%d",&value1,&value2);
+    add_result=add(value1,value2);
+    sub_result=subtract(value1,value2);
+    mult_result=multiply(value1,value2);
+    div_result=divide(value1,value2);
+
+    printf("Add value:             %.2f\n\n",add_result);
+    printf("Subtraction value:     %.2f\n\n",sub_result);
+    printf("Multiplication value:  %.2f\n\n",mult_result);
+    printf("Divided value:         %.2f\n",div_result);
+return 0;
+}
+</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+          <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 59: Max</div>
+      <div class="panel-body">
+        <p>Write a function named findMax(). It takes three parameters and return the maximum value among the three parameters. Call this function from the main function.</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> 
+      <pre class="line-numbers"> <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+double findMax(double value1,double value2,double value3)
+{
+    if(value1&gt;=value2&&value1&gt;=value3)
+        return value1;
+    else if(value2&gt;=value3)
+        return value2;
+    else
+        return value3;
+}
+
+int main()
+{
+    double number1,number2,number3,maximum=0;
+    scanf("%lf%lf%lf",&number1,&number2,&number3);
+    maximum=findMax(number1,number2,number3);
+    printf("Maximum Number: %.2llf",maximum);
+
+return 0;
+}
+</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+            <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 60: Converter</div>
+      <div class="panel-body">
+        <p>Write a currency converter function named dollarToBDT(). It takes US Dollar as input in a float variable and return the amount of Bangladeshi Taka. [Change rate: 1 USD = 78.55 BDT]</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> 
+      <pre class="line-numbers"> <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+float dollarToBDT(float dollar)
+{
+    float taka=dollar*78.55;
+    return taka;
+}
+
+int main()
+{
+    float USD,tk;
+    scanf("%f",&USD);
+    tk=dollarToBDT(USD);
+    printf("%.2f Taka.\n",tk);
+return 0;
+}
+</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+              <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 61: Absolute value</div>
+      <div class="panel-body">
+        <p>Write a function that takes any real number and return its absolute value. If user gives -5 as parameter the function will return 5.</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> 
+      <pre class="line-numbers"> <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+double absValue(double value)
+{
+    if(value&lt;0)
+        return value*(-1);
+    else
+        return value*(1);
+}
+
+int main()
+{
+    double number;
+    scanf("%lf",&number);
+    number = absValue(number);
+    printf("%.2lf",number);
+return 0;
+}
+</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+                <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 62: National Flag</div>
+      <div class="panel-body">
+        <p>Write a function which calculates the area of Bangladesh National Flag . The function takes only the length of the flag as parameter and returns the area of the flag. [Ratio of length and width is- Length:Width = 10 : 6]</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> 
+      <pre class="line-numbers"> <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+float areaOfFlag(float length)
+{
+    float width,area;
+    width=(6*length)/10;
+    area=length*width;
+    return area;
+}
+
+
+int main(main)
+{
+    float length,area;
+    printf("Enter the length of flag: ");
+    scanf("%f",&length);
+    area=areaOfFlag(length);
+    printf("Area of flag is: %.2f\n",area);
+
+}
+</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+                  <div class="panel-group">
+  
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 63: Case</div>
+      <div class="panel-body">
+        <p>Write a function named toUpperCase() which takes a small letter alphabet as input and return the capital version. If user gives ‘a’ as parameter the function will return ‘A’.</p>
+      </div>
+   
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> 
+      <pre class="line-numbers"> <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+int toUpperCase(char alphabet)
+{
+    int convert;
+    convert=alphabet;
+    convert=convert-32;
+    return convert;
+}
+
+int main()
+{
+    char alphabet;
+    scanf("%c",&alphabet);
+    alphabet=toUpperCase(alphabet);
+    printf("%c\n",alphabet);
+
+return 0;
+}
+</code></pre></div>
+    </div>
+ 
+    </div>
+
+    
+  </div>
+  
+  
+
+
+</body>
+</html>

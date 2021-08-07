@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>STRUCTUR OF UNION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bt/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+  <script src="bt/js/jquery-1.4.2.min.js"></script>
+  <script src="bt/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="css/prism.css">
+
+ <script src="js/prism.js"></script>
+</head>
+<body>
+ 
+
+<div class="panel panel-info">
+      <div class="panel-heading">Problem 81: Struct GPA</div>
+      <div class="panel-body">
+        <p>Create a simple structure named Student that holds the following variables-</p>
+		<p>i. id (integer)</p>
+		<p>ii. cgpa (float)</p>
+		<p>iii. name (string)</p>
+		<p>Now create an instance of that structure named s1 and scan the values from the user. Finally print the 					id, cgpa and name which user entered.</p>
+      </div>
+   		
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+struct student{
+    int id;
+    float cgpa;
+    char name[20];
+};
+int main()
+
+{
+    struct student s1;
+    printf("Enter ID: ");
+    scanf("%d",&s1.id);
+    printf("Enter CGPA: ");
+    scanf("%f",&s1.cgpa);
+    printf("Enter Name: ");
+    scanf("%s",&s1.name);
+    printf("\n**Students Information**\n\n");
+    printf("ID: %d\n",s1.id);
+    printf("CGPA: %f\n",s1.cgpa);
+    printf("Name: %s\n",s1.name);
+
+
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 82: Books</div>
+      <div class="panel-body">
+        <p>Create a simple structure named Book that holds the following data fields-</p>
+		<p>i. id (integer)</p>
+		<p>ii. title (string)</p>
+		<p>iii. author(string</p>
+		<p>Now create two structure variables of Book type named book1 and book2. Set the following information for</p> 		<p>the books-</p>
+		<p>For book1:</p>
+		<p>id: 101</p>
+		<p>title: C Programming Hand Note</p>
+		<p>author: Mukla.C</p>
+
+		<p>For book2:</p>
+		<p>id: 102</p>
+		<p>title: Programming with Fun</p>
+		<p>author: Joy Billah</p>
+
+		<p>Finally, print all the information of the two books.</p>
+      </div>
+   		
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;stdio.h&gt;
+ 
+struct Book{
+    int id;
+    char title[50];
+    char author[20];
+};
+int main()
+
+{
+    struct Book book1;
+    struct Book book2;
+
+    book1.id=101;
+    strcpy(book1.title,"C Programming Hand Note");
+    strcpy(book1.author,"Mukla.c");
+
+    book2.id=102;
+    strcpy(book2.title,"Programming with Fun");
+    strcpy(book2.author,"Joy Billah");
+
+    printf("Book1 Information:\n");
+    printf("ID: %d\n",book1.id);
+    printf("Title: %s\n",book1.title);
+    printf("Author: %s\n\n",book1.author);
+
+    printf("Book2 Information:\n");
+    printf("ID: %d\n",book2.id);
+    printf("Title: %s\n",book2.title);
+    printf("Author: %s\n",book2.author);
+
+return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 83: Tennis Ball</div>
+      <div class="panel-body">
+        <p>Create a structure named TanisBall where we have two fields- color (string) and weight (float). Now create a pointer variable of structure TanisBall named myBall. Scan the field values for myBall from user and finally print the information of myBall using that pointer variable myBall.</p>
+      </div>
+   		
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;stdio.h&gt;
+ 
+struct TanisBall{
+    char color[15];
+    float weight;
+
+};
+
+int main()
+{
+    struct TanisBall Ball;
+    struct TanisBall *myBall;
+    scanf("%f",&Ball.weight);
+    scanf("%s",&Ball.color);
+    myBall=&Ball;
+    printf("%f\n",myBall-&gt;weight);
+    printf("%s",myBall-&gt;color);
+
+return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 84: Writer Records</div>
+      <div class="panel-body">
+        <p>Create a structure named Writer with two fields- name (string) and genre (string). Then create an array of Writer named writerRecords. Insert the following records into the array-</p>
+		<p>i. name- Mukla.C; genre- Technical</p>
+		<p>ii. name- Mostasim Billah; genre- Technical</p>
+		<p>iii. name- Mahady Joy; genre- Technical</p>
+		<p>Finally, print the records of the array by iterating the array using loop.</p>
+      </div>
+   		
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;stdio.h&gt;
+ 
+struct Writer{
+    char name[20];
+    char genre[20];
+
+};
+
+int main()
+{
+
+    struct Writer writerRecords[3];
+    strcpy(writerRecords[0].name,"Mukla.c");
+    strcpy(writerRecords[0].genre,"Technical");
+    strcpy(writerRecords[1].name,"Mostasim Billah");
+    strcpy(writerRecords[1].genre,"Technical");
+    strcpy(writerRecords[2].name,"Mahadi Hasan Joy");
+    strcpy(writerRecords[2].genre,"Technical");
+
+    int i;
+    for(i=0;i&lt;3;i++)
+    {
+        printf("%d.\n",i+1);
+
+        printf("%s\n",writerRecords[i].name);
+        printf("%s\n",writerRecords[i].genre);
+    }
+
+return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+    
+    <div class="panel panel-info">
+      <div class="panel-heading">Problem 85: Product</div>
+      <div class="panel-body">
+        <p>Create a structure named Product with following two fields-</p>
+
+		<p>1. name (string)</p>
+		<p>2. price (double)</p>
+
+		<p>Then create a function named printProductInfo() which takes a parameter of Product type and print the information of that Product. Finally, in main function create a variable of structure Product named myProduct and call the printProductInfo() function passing myProduct as the parameter.</p>
+      </div>
+   		
+        <div class="panel panel-danger"><pre>Code: </pre>
+      <div class="panel-body"> <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+    #include&lt;stdio.h&gt;
+ 
+struct Product{
+    char name[15];
+    double price;
+
+}myProduct;
+
+void printProductInfo(struct Product p)
+{
+    printf("Product Name: %s\n",p.name);
+    printf("Product Price: %.2lf",p.price);
+}
+
+
+
+int main()
+{
+
+
+    strcpy(myProduct.name,"Sunsilk");
+    myProduct.price=2.00;
+
+    printProductInfo(myProduct);
+return 0;
+}		</code></pre></div>
+    </div>
+ 
+    </div>
+</body>
+</html>
+
+
